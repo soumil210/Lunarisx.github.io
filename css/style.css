@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+
+:root {
+  --bg: #05070d;
+  --panel: #0b1020;
+  --accent: #7c8cff;
+  --accent-2: #42e8c7;
+  --text: #e8ecff;
+  --muted: #9aa3c7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#stars {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(1200px 600px at 70% -10%, #1a1f4d 0%, transparent 60%), var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 60px;
+  background: rgba(5,7,13,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #141a3a;
+  padding: 0 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+nav a:not(.logo) {
+    color: var(--muted);
+    text-decoration: none; /* base no underline */
+    font-size: 0.9rem;
+    margin-left: 1.2rem;
+}
+
+nav a:not(.logo).active {
+    color: var(--text);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2px;
+}
+
+/* Logo link never gets underline */
+nav a.logo {
+    text-decoration: none; /* remove underline */
+    border-bottom: none;    /* just in case */
+}
+
+.logo img {
+    width: 17%; /* or whatever size */
+    height: auto;
+    vertical-align: middle;
+    border: 0; /* removes default blue border on linked images in some browsers */
+}
+
+
+main {
+  padding-top: 60px;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 6rem 8vw 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  margin: 0 auto;          /* centers the section itself */
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 750px;
+}
+
+
+section {
+  padding: 4rem 8vw;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 2rem;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #000;
+}
+
+.btn-secondary {
+  border: 1px solid #2a3160;
+  color: var(--text);
+}
+
+footer {
+  padding: 3rem 8vw;
+  border-top: 1px solid #141a3a;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.site-footer {
+  border-top: 1px solid #141a3a;
+  background: rgba(5,7,13,0.85);
+  padding: 3rem 8vw;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.footer-brand img {
+  width: 33%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.footer-brand h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  display: block;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--text);
+}
+
+.footer-contact a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+.logo-marquee {
+  overflow: hidden;
+  background-color: var(--panel);
+  padding: 1rem 0;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  animation: scroll 15s linear infinite;
+}
+
+.marquee-track img {
+  height: 50px;
+  margin: 0 2rem;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+
+
+
+

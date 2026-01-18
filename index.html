@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lunaris-X – Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <canvas id="stars"></canvas>
+
+</head>
+
+  
+<body>
+<script src="js/stars.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/navbar.js"></script>
+  <script defer src="js/marquee.js"></script>
+
+
+
+
+<main>
+
+  <!-- Hero Section -->
+  <section class="hero">
+  <h1>Lunaris-X</h1>
+  <p class="lead">
+    The first ever second generation cansat engineered through our CanSat mission,
+    combining real-world aerospace innovation with hands-on learning.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="cansat.html" class="btn btn-primary">Our Mission</a>
+    <a href="specs.html" class="btn btn-secondary">Specifications</a>
+  </div>
+</section>
+
+
+  <!-- Quick Overview Cards -->
+  <section style="padding-bottom:6rem;">
+    <h2 style="text-align:center; margin-bottom:2rem;">Quick Links</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Mission</h3>
+        <p>Explore the CanSat project and see how we simulate a real satellite mission.</p>
+        <a href="cansat.html" class="btn btn-primary" style="margin-top:1rem;">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Specifications</h3>
+        <p>Check the technical details of our satellite platform and its components.</p>
+        <a href="specs.html" class="btn btn-primary" style="margin-top:1rem;">View Specs</a>
+      </div>
+      <div class="card">
+        <h3>Team</h3>
+        <p>Meet the team members responsible for designing and building Lunaris X.</p>
+        <a href="team.html" class="btn btn-primary" style="margin-top:1rem;">Meet the Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional Space Background Animation -->
+  <canvas id="stars" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;"></canvas>
+
+</main>
+
+
+
+<script>
+// Simple starfield animation
+const canvas = document.getElementById('stars');
+const ctx = canvas.getContext('2d');
+let stars = [];
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resize);
+resize();
+
+for(let i=0;i<200;i++){
+  stars.push({x:Math.random()*canvas.width, y:Math.random()*canvas.height, r:Math.random()*1.5+0.5});
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  for(let s of stars){
+    ctx.beginPath();
+    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle="white";
+    ctx.fill();
+    s.y -= 0.2;
+    if(s.y<0) s.y=canvas.height;
+  }
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>

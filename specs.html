@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lunaris-X – Technical Specifications</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <canvas id="stars"></canvas>
+  <script defer src="js/stars.js"></script>
+  <script defer src="js/navbar.js"></script>
+  <script defer src="js/footer.js"></script>
+  <script defer src="js/marquee.js"></script>
+</head>
+
+<body>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Technical Specifications</h1>
+    <p class="lead">
+      A detailed overview of the Lunaris-X CanSat hardware, software, and system architecture.
+    </p>
+  </section>
+
+  <!-- MISSION OVERVIEW -->
+  <section>
+    <h2>Mission Overview</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Primary Mission</h3>
+        <p>
+          Continuous measurement of air pressure and temperature throughout the flight.
+          Altitude is calculated using barometric pressure data and visualized after recovery.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Secondary Mission</h3>
+        <p>
+          Measurement of orientation, rotation, and stability using a 9-axis IMU, enabling
+          reconstruction of the full 3D flight path and attitude.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HARDWARE -->
+  <section>
+    <h2>Hardware Architecture</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Primary Sensor</h3>
+        <p>
+          BMP388 barometric pressure and temperature sensor, selected for its high accuracy,
+          low noise, and suitability for altitude calculations.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Inertial Measurement Unit</h3>
+        <p>
+          9-axis IMU (accelerometer, gyroscope, magnetometer) recording motion and orientation
+          at ≥60 Hz, allowing detection of vibration and rotation.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Microcontroller</h3>
+        <p>
+          ESP32 microcontroller responsible for sensor communication, data processing,
+          telemetry transmission, and onboard storage.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Power System</h3>
+        <p>
+          Rechargeable Li-Po battery with onboard regulation and a reserve supercapacitor
+          to safely complete flash writes during sudden power loss.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNICATION & STORAGE -->
+  <section>
+    <h2>Communication & Data Handling</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Telemetry</h3>
+        <p>
+          Radio telemetry is used to transmit live flight data to the ground station
+          during descent. Ascent data is stored locally due to launch shielding.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Data Storage</h3>
+        <p>
+          All sensor data is written to onboard flash memory as a fail-safe,
+          ensuring full data recovery even if telemetry is interrupted.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFTWARE -->
+  <section>
+    <h2>Software & Data Analysis</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Embedded Software</h3>
+        <p>
+          The ESP32 runs custom firmware to read sensors, manage power,
+          handle telemetry, and log data in a structured format.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Post-Flight Analysis</h3>
+        <p>
+          Pressure data is converted into altitude, IMU data into Euler angles,
+          and all measurements are visualized using graphs and a 3D animation.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>3D Reconstruction</h3>
+        <p>
+          A realistic Blender animation is created using real flight data,
+          allowing analysis of stability, rotation, and aerodynamic behavior.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AIRFRAME -->
+  <section>
+    <h2>Mechanical Design</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Airframe</h3>
+        <p>
+          Custom-designed can-shaped airframe, 3D-printed using carbon-reinforced
+          plastic for high impact resistance and durability.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Structural Protection</h3>
+        <p>
+          Shock-absorbing mountings protect sensitive electronics from landing impacts
+          and launch vibrations up to 20G.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>CAD & Manufacturing</h3>
+        <p>
+          The full CanSat is designed in CAD and manufactured using FDM 3D printers
+          available at Keizer Karel College.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

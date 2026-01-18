@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lunaris-X – The Mission</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <canvas id="stars"></canvas>
+  <script defer src="js/stars.js"></script>
+  <script defer src="js/navbar.js"></script>
+  <script defer src="js/footer.js"></script>
+</head>
+
+<body>
+
+<main>
+
+  <!-- INTRODUCTION -->
+  <section class="hero">
+    <h1>The Mission</h1>
+    <p class="lead">
+      The <strong>CanSat competition</strong> is an international educational program organized by
+      <strong>ESERO</strong> in collaboration with the <strong>European Space Agency (ESA)</strong>.
+      Students are challenged to design, build, and launch a satellite the size of a soda can,
+      simulating a real space mission and gaining hands-on experience in aerospace engineering.
+    </p>
+
+    <p class="lead">
+      Team <strong>Lunaris-X</strong>, from <strong>Keizer Karel College in Amstelveen</strong>,
+      is developing a fully functional CanSat that performs environmental measurements,
+      transmits flight data to a ground station, and enables in-depth post-flight analysis.
+    </p>
+  </section>
+
+  <!-- MISSION OBJECTIVES -->
+  <section>
+    <h2>Mission Objectives</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Primary Mission</h3>
+        <p>
+          Measure air temperature and air pressure continuously throughout the flight.
+          The collected data is transmitted to the ground station during descent and
+          stored locally as a fail-safe. Pressure data is converted into altitude,
+          allowing reconstruction of the full flight profile and generation of
+          detailed graphs.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Secondary Mission</h3>
+        <p>
+          Record the CanSat’s orientation, rotation, and stability using a 9-axis IMU
+          consisting of an accelerometer, gyroscope, and magnetometer. By combining
+          this data with altitude measurements, a 3D model of the CanSat’s trajectory
+          and attitude is reconstructed, resulting in a realistic visualization of
+          the flight dynamics during ascent, release, descent, and landing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THIS MISSION -->
+  <section>
+    <h2>Why This Mission?</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Engineering Relevance</h3>
+        <p>
+          Stability and orientation control are fundamental aspects of all aerospace
+          systems, from sounding rockets to satellites. Measuring real-world motion
+          allows evaluation of aerodynamic behavior and structural design.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Data Visualization</h3>
+        <p>
+          The 3D reconstruction transforms raw sensor data into a clear and intuitive
+          visualization, making otherwise invisible dynamics such as rotation and
+          vibration easier to understand and analyze.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
