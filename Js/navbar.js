@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-  fetch('Partials/../Navbar.html')
+  fetch('../Partials/Navbar.html')
     .then(res => res.text())
     .then(html => {
       // insert at the top of the body
