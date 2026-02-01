@@ -5,7 +5,7 @@
   <title>Lunaris-X – Home</title>
   <link rel="stylesheet" href="css/style.css">
   <canvas id="stars"></canvas>
-  
+  <meta name="google-site-verification" content="KtyVFrrc0cIH3LGOI_zDLRsp-lhA03eJhNZvmtMJsuA" />
 
 
 </head>
@@ -13,9 +13,8 @@
   
 <body>
 <script src="Js/stars.js"></script>
-  <script src="Js/footer.js"></script>
+
   <script defer src="Js/navbar.js"></script>
-  <script defer src="Js/marquee.js"></script>
 
 
 
@@ -64,38 +63,8 @@
 
 </main>
 
-
-
-<script>
-// Simple starfield animation
-const canvas = document.getElementById('stars');
-const ctx = canvas.getContext('2d');
-let stars = [];
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-window.addEventListener('resize', resize);
-resize();
-
-for(let i=0;i<200;i++){
-  stars.push({x:Math.random()*canvas.width, y:Math.random()*canvas.height, r:Math.random()*1.5+0.5});
-}
-
-function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  for(let s of stars){
-    ctx.beginPath();
-    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-    ctx.fillStyle="white";
-    ctx.fill();
-    s.y -= 0.2;
-    if(s.y<0) s.y=canvas.height;
-  }
-  requestAnimationFrame(animate);
-}
-animate();
-</script>
+  <script src="Js/footer.js"></script>
+  <script defer src="Js/marquee.js"></script>
 
 </body>
 </html>
