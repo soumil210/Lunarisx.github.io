@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Base URL set to the project GitHub Pages site found in the repo -->
+
+  <url>
+    <loc>https://lunarix.github.io/</loc>
+    <lastmod>2026-02-02T00:41:27+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://lunarix.github.io/cansat.html</loc>
+    <lastmod>2026-02-02T00:41:27+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lunarix.github.io/specs.html</loc>
+    <lastmod>2026-02-02T00:41:27+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://lunarix.github.io/team.html</loc>
+    <lastmod>2026-02-02T00:41:27+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://lunarix.github.io/cansat%20copy.html</loc>
+    <lastmod>2026-01-18T20:34:40+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://lunarix.github.io/Partials/Navbar.html</loc>
+    <lastmod>2026-01-21T09:14:22+01:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://lunarix.github.io/Partials/footer.html</loc>
+    <lastmod>2026-02-02T00:55:35+01:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://lunarix.github.io/Partials/logo-marquee.html</loc>
+    <lastmod>2026-01-21T09:19:05+01:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+</urlset>
