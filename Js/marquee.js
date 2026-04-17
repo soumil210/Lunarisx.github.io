@@ -4,6 +4,12 @@
 fetch('Partials/logo-marquee.html')
   .then(res => res.text())
   .then(html => {
-    const footer = document.querySelector('footer') || document.body;
-    footer.insertAdjacentHTML('beforebegin', html);
+    // Wait for the footer to be injected by footer.js
+    const timer = setInterval(() => {
+      const footer = document.querySelector('footer');
+      if (footer) {
+        footer.insertAdjacentHTML('beforebegin', html);
+        clearInterval(timer);
+      }
+    }, 50);
   });
