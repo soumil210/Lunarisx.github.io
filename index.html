@@ -1,70 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Lunaris-X – Home</title>
-  <link rel="stylesheet" href="css/style.css">
-  <canvas id="stars"></canvas>
+  <link rel="stylesheet" href="css/style.css?v=2">
   <meta name="google-site-verification" content="KtyVFrrc0cIH3LGOI_zDLRsp-lhA03eJhNZvmtMJsuA" />
-
-
 </head>
 
-  
 <body>
-<script src="Js/stars.js"></script>
+  <canvas id="stars"></canvas>
+  <script src="Js/stars.js?v=2"></script>
+  <script defer src="Js/navbar.js?v=2"></script>
 
-  <script defer src="Js/navbar.js"></script>
-
-
-
-
-<main>
-
-  <!-- Hero Section -->
-  <section class="hero">
-  <h1>Lunaris-X</h1>
-  <p class="lead">
-    The first ever second generation cansat engineered through our CanSat mission,
-    combining real-world aerospace innovation with hands-on learning.
-  </p>
-
-  <div class="hero-buttons">
-    <a href="cansat.html" class="btn btn-primary">Our Mission</a>
-    <a href="specs.html" class="btn btn-secondary">Specifications</a>
-  </div>
-</section>
-
-
-  <!-- Quick Overview Cards -->
-  <section style="padding-bottom:6rem;">
-    <h2 style="text-align:center; margin-bottom:2rem;">Quick Links</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Mission</h3>
-        <p>Explore the CanSat project and see how we simulate a real satellite mission.</p>
-        <a href="cansat.html" class="btn btn-primary" style="margin-top:1rem;">Learn More</a>
+  <main>
+    <section class="hero grid-2">
+      <div>
+        <span class="subtitle">Mission Protocol</span>
+        <h1 class="moderniz-text">LUNARIS-X</h1>
+        <p class="lead">
+          Pioneering the second generation of CanSats. We are innovating our payload from the ground up, utilizing
+          unparalleled computational power and structurally reinforced architecture to execute a flawlessly calibrated
+          flight.
+        </p>
+        <div class="buttons">
+          <a href="cansat.html" class="btn btn-primary">Discover the Mission</a>
+          <a href="specs.html" class="btn btn-secondary">Hardware Specs</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Specifications</h3>
-        <p>Check the technical details of our satellite platform and its components.</p>
-        <a href="specs.html" class="btn btn-primary" style="margin-top:1rem;">View Specs</a>
+      <div>
+        <img src="img/lunaris.webp" alt="Lunaris-X Model" class="hero-model"
+          style="filter: drop-shadow(0 0 30px var(--accent-glow));">
       </div>
-      <div class="card">
-        <h3>Team</h3>
-        <p>Meet the team members responsible for designing and building Lunaris X.</p>
-        <a href="team.html" class="btn btn-primary" style="margin-top:1rem;">Meet the Team</a>
+    </section>
+
+    <section>
+      <div class="grid-2">
+        <div>
+          <span class="subtitle">Navigation</span>
+          <h2 class="moderniz-text">System Database</h2>
+          <div class="grid" style="grid-template-columns: 1fr; margin-top: 1.5rem;">
+            <a href="cansat.html" style="text-decoration: none; color: inherit;">
+              <div class="card">
+                <h3>Operational Mission</h3>
+                <p>Review our mission parameters and primary capabilities ranging from continuous barometric telemetry
+                  to advanced 3D attitude tracking.</p>
+              </div>
+            </a>
+            <a href="specs.html" style="text-decoration: none; color: inherit;">
+              <div class="card">
+                <h3>Hardware Specifications</h3>
+                <p>Inspect the engineering framework. Full analysis of the custom dual-core ESP32 payload, integrated
+                  logic board, and 3D printed airframe.</p>
+              </div>
+            </a>
+            <a href="team.html" style="text-decoration: none; color: inherit;">
+              <div class="card">
+                <h3>Engineering Crew</h3>
+                <p>Access personnel records for the project engineers, system designers, and operational leads
+                  responsible for the Lunaris-X architecture.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div>
+          <!-- Replaced HermesMAIN with lunaris.webp or PCB.webp so it's only Lunaris-X specific -->
+          <img src="img/PCB.webp" alt="PCB Engineering Overview" class="tech-image"
+            style="border: none; background: transparent; padding: 0; filter: drop-shadow(0 0 20px rgba(58, 134, 255, 0.4));">
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Optional Space Background Animation -->
-  <canvas id="stars" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;"></canvas>
+  </main>
 
-</main>
-
-  <script src="Js/footer.js"></script>
-  <script defer src="Js/marquee.js"></script>
+  <script src="Js/footer.js?v=2"></script>
+  <script defer src="Js/marquee.js?v=2"></script>
 
 </body>
+
 </html>

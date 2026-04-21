@@ -1,120 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Lunaris-X – The Mission</title>
+  <title>Lunaris-X – Our Mission</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
 
   <canvas id="stars"></canvas>
-  <script defer src="Js/stars.js"></script>
-  <script defer src="Js/navbar.js"></script>
+  <script defer src="Js/stars.js?v=2"></script>
+  <script defer src="Js/navbar.js?v=2"></script>
   <meta name="google-site-verification" content="KtyVFrrc0cIH3LGOI_zDLRsp-lhA03eJhNZvmtMJsuA" />
 </head>
 
 <body>
+  <main>
 
-<main>
-
-  <!-- INTRODUCTION -->
-  <section class="hero">
-    <h1>The Mission</h1>
-    <p class="lead">
-      The <strong>CanSat competition</strong> is an international educational program organized by
-      <strong>ESERO</strong> in collaboration with the <strong>European Space Agency (ESA)</strong>.
-      Students design, build, and launch a satellite the size of a soda can, simulating a real
-      space mission while gaining hands-on experience in aerospace engineering.
-    </p>
-
-    <p class="lead">
-      Team <strong>Lunaris-X</strong>, from <strong>Keizer Karel College in Amstelveen</strong>,
-      is developing a fully functional CanSat capable of environmental measurements,
-      live telemetry, and advanced post-flight analysis.
-    </p>
-  </section>
-
-  <!-- MISSION OBJECTIVES -->
-  <section>
-    <h2>Mission Objectives</h2>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Primary Mission</h3>
-        <p>
-          Measure air temperature and air pressure continuously throughout the flight.
-          The collected data is transmitted to the ground station during descent and
-          stored locally as a fail-safe. Pressure data is converted into altitude,
-          allowing reconstruction of the complete flight profile.
+    <section class="hero grid"
+      style="grid-template-columns: 0.8fr 1.5fr; min-height: 60vh; align-items: center; gap: 4rem;">
+      <div>
+        <span class="subtitle">Directive</span>
+        <h1 class="moderniz-text">The Mission</h1>
+        <p class="lead" style="font-size: 1rem; margin-bottom: 1rem;">
+          Our objective is to develop a highly advanced CanSat capable of collecting dynamic flight data, including
+          angular velocity, pressure, and density. Utilizing the superior processing power of the ESP32 and our
+          precisely fabricated custom PCB, we aim to push the boundaries of reliability and set a new standard for
+          future teams.
+        </p>
+        <p class="lead" style="font-size: 1rem; margin-bottom: 0; padding-bottom: 1rem;">
+          Beyond technical execution, our mission is deeply rooted in STEM outreach. By promoting our project locally
+          and open-sourcing our codebase in MicroPython, we are paving the way for the next generation of engineers to
+          iterate, debug, and rapidly prototype their own aerospace hardware.
         </p>
       </div>
-
-      <div class="card">
-        <h3>Secondary Mission</h3>
-        <p>
-          Record the CanSat’s orientation, rotation, and stability using a 9-axis IMU.
-          By combining this data with altitude measurements from the primary mission,
-          a 3D reconstruction of the flight path and attitude is created, revealing
-          dynamics that are not visible from video recordings alone.
-        </p>
+      <div>
+        <!-- PCB pic made far bigger by heavily expanding its grid column -->
+        <img src="img/PCB.webp" alt="Lunaris-X Internal Hardware" class="hero-model"
+          style="max-width: none; width: 100%; transform: scale(1.15); border-radius: 12px; filter: drop-shadow(0 0 40px rgba(58, 134, 255, 0.4)); margin-left: auto;">
       </div>
-    </div>
-  </section>
-  <!-- INNOVATION & MODERNIZATION -->
-<section>
-  <h2>Innovation & Modernization</h2>
+    </section>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Second Generation Design</h3>
-      <p>
-        In addition to completing our primary and secondary missions, we are proud to 
-        present the first-ever second-generation CanSat, representing a major step forward
-        in design and functionality. Through extensive research and experimentation,
-        we have incorporated newer, faster microcontrollers and more efficient system 
-        designs, setting a precedent for future teams. This pioneering approach not only 
-        improves performance and reduces costs but also simplifies construction, 
-        making advanced CanSat technology more accessible.
-      </p>
+    <section>
+      <div class="grid-2">
+        <div>
+          <img src="img/Missionrender.png" alt="Simulation Trajectory" class="tech-image"
+            style="border-radius: 16px; width: 100%; border: none; background: transparent; filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));">
+        </div>
+        <div>
+          <span class="subtitle">Operational Targets</span>
+          <h2 class="moderniz-text">Mission Overview</h2>
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h3>3D Flight Reconstruction</h3>
+            <p>
+              By capturing continuous stability metrics through a 9-axis IMU, we reconstruct a powerful 3D visualization
+              of the CanSat's absolute orientation throughout its entire descent. This interlaced data provides rare,
+              invisible insight into the rocket's aerodynamic real-world behavior.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Purpose & Application</h3>
+            <p>
+              Orientation control is crucial for any aerospace system. This 3D mapping not only demonstrates our flight
+              path flawlessly but provides invaluable altimeter-paired telemetry that we intend to open-source into a
+              global library, helping future teams improve their aerodynamic layouts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <p>
-        While fully complying with the current competition requirements, we hope that
-        the insights gained from our design choices can contribute to the evolution
-        of future CanSat designs and inspire improvements in upcoming editions of
-        the competition.Second Generation CanSat – A First
-      </p>
-    </div>
-  </div>
-</section>
-  <!-- WHY THIS APPROACH -->
-<section>
-  <h2>Why This Approach?</h2>
+    <section>
+      <div class="grid-2">
+        <div>
+          <span class="subtitle">Validation</span>
+          <h2 class="moderniz-text">Hardware Testing</h2>
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <h3>Endurance Cycles</h3>
+            <p>
+              Recognizing that our CanSat relies heavily on sensitive electronics, we subjected the frame to aggressive
+              G-force simulators and rigorous vibration stress testing utilizing a motorized chassis.
+            </p>
+            <p style="margin-top: 1rem;">
+              Coupled with repeated drop tests from viewing towers, these physical evaluations allowed us to patch
+              stress fractures and optimize our parachute deployment systems long before arriving at the launch site.
+            </p>
+          </div>
+        </div>
+        <div>
+          <!-- Random placement of Airframe with parts as requested -->
+          <img src="img/Airframewithparts.jpg" alt="Airframe Internal Parts Breakdown" class="tech-image"
+            style="border-radius: 12px; filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.05)); margin: 0; padding: 0; width: 100%; border: none;">
+        </div>
+      </div>
+    </section>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Engineering Insight</h3>
-      <p>
-        Iterative design and modernization reflect real aerospace practice, where
-        new technologies are constantly integrated to improve performance, efficiency,
-        and reliability.
-      </p>
-    </div>
+    <!-- Outcome section has been completely removed -->
 
-    <div class="card">
-      <h3>Impact on Future Teams</h3>
-      <p>
-        By exploring more efficient designs and modern components, we aim to provide
-        ideas that future CanSat teams can build on, inspiring innovation and raising
-        the overall standard of the competition.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-</main>
-  <script src="Js/footer.js"></script>
-  <script defer src="Js/marquee.js"></script>
+  </main>
+  <script src="Js/footer.js?v=2"></script>
+  <script defer src="Js/marquee.js?v=2"></script>
 
 </body>
+
 </html>
